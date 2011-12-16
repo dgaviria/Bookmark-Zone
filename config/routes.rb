@@ -1,5 +1,4 @@
-Bookmarkzone::Application.routes.draw do
-
+BookmarkZone::Application.routes.draw do
   match '/about',   :to => 'pages#about'
 
   root :to => 'pages#home'

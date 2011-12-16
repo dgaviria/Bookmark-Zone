@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Bookmarkzone::Application.load_tasks
+BookmarkZone::Application.load_tasks

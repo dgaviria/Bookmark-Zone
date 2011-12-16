@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Bookmarkzone::Application.config.secret_token = '852b57e8f52336b0c36a1c6206dbd7035fd18ea2c836d3095d4952229870face8a56cf5988282358146f44815727694f398ac510add01bf9596189ac1435bda6'
+BookmarkZone::Application.config.secret_token = 'd9167f51af1092355c71445055cce138e7ca843c87434100702826f99c4d3c006c620a9d08b5e18cd113d8307f54146c7ce1e2cf7869defe2396f3657614407c'

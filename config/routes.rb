@@ -2,6 +2,7 @@ BookmarkZone::Application.routes.draw do
   get "users/new"
 
   match '/about',   :to => 'pages#about'
+  match '/new',   :to => 'users#new'
 
   root :to => 'pages#home'
 

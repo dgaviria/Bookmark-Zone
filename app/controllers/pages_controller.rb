@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @title = "Daniel is gay"
   end
 
 end

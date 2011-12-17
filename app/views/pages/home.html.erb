@@ -1,3 +1,7 @@
-<p>Welcome to Bookmarkzone. Here you can bookmark things. Pretty sweet, huh?</p>
+<%# if !signed_in? %>
+	<p>Welcome to Bookmarkzone. Here you can bookmark things. Pretty sweet, huh?</p>
 
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<%# else %>
+	<%# render 'users/hscreen' %>
+<%# end %>

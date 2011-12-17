@@ -3,14 +3,12 @@
 </h1>
 
 <p>
-	This is the user <%= @user.name %>. <br>
-	He has <%= @user.books.count %> books. <br>
-	<br>
+	You have <%= pluralize(@user.books.count, 'book') %>. <br>
 </p>
 
 <p>
 	<% @user.books.each do |b| %>
-		<br><%= b.name %><br>
+		<br><i><%= b.name %></i><br>
 	<% end %>
 </p>
 

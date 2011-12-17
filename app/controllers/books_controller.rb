@@ -4,6 +4,11 @@ class BooksController < ApplicationController
     @book = Book.new
   end
   
+  def index
+    @title = "All Books"
+    @users = Book.all
+  end
+  
   def create
     book = current_user.books.create!(:title => params[:book][:title],
                         :author => params[:book][:author])

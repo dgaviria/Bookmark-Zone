@@ -1,6 +1,7 @@
-require 'digest'
 class Book < ActiveRecord::Base
-  attr_accessor :title, :author, :uid
+  belongs_to :user
+  attr_accessible :title, :author
+  
   
   validates :title, :presence => true,
                     :length => { :maximum => 50 },

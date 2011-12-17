@@ -3,24 +3,19 @@
 </h1>
 
 <p>
-	This is the user <%= @user.name %>
+	This is the user <%= @user.name %>. <br>
+	He has <%= @user.books.count %> books. <br>
+	
+	Here they are 
 </p>
 
 <p>
-	<%= form_for(@book) do |f| %>
-	  <div class="field">
-		<%= f.label :title %><br />
-		<%= f.text_field :title %>
-	  </div>
-
-	  <div class="field">
-	    <%= f.label :author %><br />
-	    <%= f.text_field :author %>
-	  </div>
-
-	  <div class="actions">
-	    <%= f.submit "Add book" %>
-	  </div>
-
+	This is params: <%= @param %>
+	
+	<% @user.books.each do |b| %>
+		<br><%= b.name %> <br>
 	<% end %>
 </p>
+
+
+<%= render 'books/addbook' %>

@@ -10,5 +10,8 @@ module ApplicationHelper
     end
   end
   
+  def logo
+    image_tag("bookmark.png", :alt => "Sample App", :class => "round")
+  end
   
 end

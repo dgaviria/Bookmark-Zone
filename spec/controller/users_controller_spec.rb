@@ -43,7 +43,7 @@ describe UsersController do
     describe "success" do
     
       before(:each) do
-        @attr = { :name => "New User", :email => "user@example.com",
+        @attr = { :first => "New User", :email => "user@example.com",
                   :password => "foobar", :password_confirmation => "foobar" }
       end
 
@@ -58,5 +58,6 @@ describe UsersController do
         response.should redirect_to(user_path(assigns(:user)))
       end    
     end
+    
   end
 end

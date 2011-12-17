@@ -1,10 +1,9 @@
 BookmarkZone::Application.routes.draw do
   resources :users
+  root :to => 'pages#home'
 
   match '/about',   :to => 'pages#about'
-  match '/new',   :to => 'users#new'
-
-  root :to => 'pages#home'
+  match '/signup',   :to => 'users#signup'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

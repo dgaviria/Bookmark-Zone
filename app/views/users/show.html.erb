@@ -1,7 +1,26 @@
 <h1>
-  <%= @user.name %>
+  Welcome <%= @user.name %>
 </h1>
 
 <p>
 	This is the user <%= @user.name %>
+</p>
+
+<p>
+	<%= form_for(@book) do |f| %>
+	  <div class="field">
+		<%= f.label :title %><br />
+		<%= f.text_field :title %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :author %><br />
+	    <%= f.text_field :author %>
+	  </div>
+
+	  <div class="actions">
+	    <%= f.submit "Add book" %>
+	  </div>
+
+	<% end %>
 </p>

@@ -3,8 +3,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @title = @user.name
   end
-
-  def new
+  
+  def signup
     @user = User.new(params[:user])
     @title = "Sign up"
   end
@@ -17,7 +17,8 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       @title = "Sign up"
-      render 'new'
+      render 'signup'
     end
   end
+  
 end

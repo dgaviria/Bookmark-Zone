@@ -6,5 +6,5 @@ class PagesController < ApplicationController
   def about
     @title = "Who we are"
   end
-
+  
 end

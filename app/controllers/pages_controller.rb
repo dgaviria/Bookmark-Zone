@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
   def home
-    @title = "home"
+    @title = "Mi casa es tu casa"
   end
 
   def about
-    @title = "Daniel is gay"
+    @title = "Who we are"
   end
 
 end

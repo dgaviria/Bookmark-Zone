@@ -5,19 +5,24 @@
 	<%= f.label :username %><br />
 	<%= f.text_field :username %>
   </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
+
   <div class="field">
     <%= f.label "First name" %><br />
     <%= f.text_field :first %>
   </div>
+
   <div class="field">
-    <%= f.label :last %><br />
-    <%= f.text_field :last %>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
   </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
 <% end %>

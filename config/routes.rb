@@ -1,13 +1,12 @@
 BookmarkZone::Application.routes.draw do
-  get "sessions/new"
-
+  #get "sessions/new"
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/about',   :to => 'pages#about'
-  match '/signup',   :to => 'users#new'
+  match '/new',   :to => 'users#new'
 
   root :to => 'pages#home'
 

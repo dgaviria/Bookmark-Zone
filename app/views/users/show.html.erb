@@ -1,0 +1,18 @@
+<h1>
+  Welcome <%= @user.name %>
+</h1>
+
+<p>
+	This is the user <%= @user.name %>. <br>
+	He has <%= @user.books.count %> books. <br>
+	<br>
+</p>
+
+<p>
+	<% @user.books.each do |b| %>
+		<br><%= b.name %><br>
+	<% end %>
+</p>
+
+
+<%= render 'books/addbook' %>

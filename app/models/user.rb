@@ -1,5 +1,7 @@
 require 'digest'
 class User < ActiveRecord::Base
+  has_many :books
+  
   attr_accessor :password
   attr_accessible :username, :first, :last, :password, :password_confirmation
   

@@ -1,0 +1,23 @@
+<p>
+	<h1>
+		Add more marks
+	</h1>
+	
+	<%= form_for @mark do |f| %>
+	  <div class="field">
+		<%= f.label :page %><br />
+		<%= f.text_field :page %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :note %><br />
+	    <%= f.text_field :note %>
+	  </div>
+
+	  <div class="actions">
+		<%= f.hidden_field:book_id, :value => @book.id %>
+	    <%= f.submit "Add mark" %>
+	  </div>
+
+	<% end %>
+</p>

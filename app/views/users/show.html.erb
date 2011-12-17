@@ -8,7 +8,7 @@
 
 <p>
 	<% @user.books.each do |b| %>
-		<br><i><%= b.name %></i><br>
+		<br><i><%= link_to b.name, b %></i><br>
 	<% end %>
 </p>
 

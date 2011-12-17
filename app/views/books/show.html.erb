@@ -1,3 +1,15 @@
 <p>
 	This is the book: <%= @book.name %>
 </p>
+
+<p>
+	This book has <%= pluralize(@book.marks.count, "mark") %>
+</p>
+
+<p>
+	<% @book.marks.each do |m| %>
+		<br><i><%= link_to m.page, m %></i><br>
+	<% end %>
+</p>
+
+<%= render 'marks/addmark' %>

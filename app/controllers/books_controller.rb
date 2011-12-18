@@ -26,6 +26,8 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @title = @book.title
     @mark = Mark.new
+    @user = User.find(@book.user_id)
+    @user_is_book_owner = (@user == current_user)
   end
   
   def destroy

@@ -12,10 +12,19 @@
 
 body {
 	background-color: #EFEDE0;
+	font-family:"Palatino", serif;
+	color: #333333;
 }
 
 h1 {
 	color: #825946;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h2 {
+	color: #825946;
+	opacity:0.6;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 /* Round corners */

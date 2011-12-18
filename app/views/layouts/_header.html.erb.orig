@@ -4,7 +4,11 @@
 		<ul>
 			<li><%= link_to "Home", root_path %></li>
 			<li><%= link_to "About", about_path %></li>
+<<<<<<< HEAD
       		<li><%= link_to "Books", books_path %></li>
+			<li><%= link_to "Profile", current_user %></li>
+=======
+>>>>>>> 91ef7f18ff51e85afb71dd48ea3d21bd9b01bd9f
 			<% if signed_in? %>
 			<li><%= link_to "Profile", current_user %></li>
 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>

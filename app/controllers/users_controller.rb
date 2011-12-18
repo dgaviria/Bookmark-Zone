@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       @title = "Sign up"
-      render 'signup'
+      render 'new'
     end
   end
   

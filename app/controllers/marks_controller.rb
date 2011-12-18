@@ -5,14 +5,14 @@ class MarksController < ApplicationController
   def create
     book_id = params[:mark][:book_id]
     current_book = Book.find(book_id)
-    mark = current_book.marks.create!(:page => params[:mark][:page],
+    @mark = current_book.marks.new(:page => params[:mark][:page],
                         :note => params[:mark][:note])
-    if mark.nil?
+    if @mark.save
+      flash.now[:success] = "Mark Created!"
+      redirect_to current_book
+    else
       flash.now[:error] = "Mark could not be created."
       @title = "Add mark"
-      render 'new'
-    else
-      flash.now[:success] = "Mark Created!"
       redirect_to current_book
     end
   end

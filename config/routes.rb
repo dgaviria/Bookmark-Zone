@@ -8,6 +8,7 @@ BookmarkZone::Application.routes.draw do
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/about',   :to => 'pages#about'
+  match '/books',   :to => 'books#index'
 
   match '/signup',   :to => 'users#signup'
   

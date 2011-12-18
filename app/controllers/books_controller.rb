@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   
   def index
     @title = "All Books"
-    @users = Book.all
+    @books = Book.all
   end
   
   def create

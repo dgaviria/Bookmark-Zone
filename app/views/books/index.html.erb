@@ -1,0 +1,9 @@
+<h1>All books</h1>
+
+<ul>
+  <% @books.each do |b| %>
+    <li>
+      <%= link_to b.name, b %>
+    </li>
+  <% end %>
+</ul>

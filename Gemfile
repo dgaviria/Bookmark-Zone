@@ -9,8 +9,6 @@ gem 'sqlite3'
 
 gem 'json'
 
-gem 'activerecord-postgresql-adapter'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

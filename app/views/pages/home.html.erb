@@ -1,7 +1,22 @@
-<%# if !signed_in? %>
+<% if signed_in? %>
+	<h1>
+	  Welcome <%= @user.name %>
+	</h1>
+
+	<p>
+		You have <%= pluralize(@user.books.count, 'book') %>. <br>
+	</p>
+
+	<p>
+		<% @user.books.each do |b| %>
+			<br><i><%= link_to b.name, b %></i><br>
+		<% end %>
+	</p>
+
+
+	<%= render 'books/addbook' %>
+<% else %>
 	<p>Welcome to Bookmarkzone. Here you can bookmark things. Pretty sweet, huh?</p>
 
 	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
-<%# else %>
-	<%# render 'users/hscreen' %>
-<%# end %>
+<% end %>

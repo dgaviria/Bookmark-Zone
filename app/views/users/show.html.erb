@@ -1,9 +1,9 @@
 <h1>
-  Welcome <%= @user.name %>
+  <%= @user.name %>'s Profile
 </h1>
 
 <p>
-	You have <%= pluralize(@user.books.count, 'book') %>. <br>
+	He has <%= pluralize(@user.books.count, 'book') %>. <br>
 </p>
 
 <p>
@@ -11,6 +11,3 @@
 		<br><i><%= link_to b.name, b %></i><br>
 	<% end %>
 </p>
-
-
-<%= render 'books/addbook' %>

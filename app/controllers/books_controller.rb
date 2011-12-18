@@ -10,22 +10,23 @@ class BooksController < ApplicationController
   end
   
   def create
-    book = current_user.books.create!(:title => params[:book][:title],
+    @book = current_user.books.new(:title => params[:book][:title],
                         :author => params[:book][:author])
-    if book.nil?
+    if @book.save
+      flash.now[:success] = "Book Created!"
+      redirect_to @book
+    else
       flash.now[:error] = "Book could not be created."
       @title = "Add book"
       render 'new'
-    else
-      flash.now[:success] = "Book Created!"
-      redirect_to book
     end
   end
-  
   def show
     @book = Book.find(params[:id])
     @title = @book.title
     @mark = Mark.new
+    @user = User.find(@book.user_id)
+    @user_is_book_owner = (@user == current_user)
   end
   
   def destroy

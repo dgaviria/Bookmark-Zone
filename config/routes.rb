@@ -10,7 +10,7 @@ BookmarkZone::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/books',   :to => 'books#index'
 
-  match '/signup',   :to => 'users#signup'
+  match '/signup',   :to => 'users#new'
   
   match '/addbook',   :to => 'books#new'
   match '/removebook',   :to => 'books#destroy'

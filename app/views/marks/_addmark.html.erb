@@ -4,6 +4,10 @@
 	</h2>
 	
 	<%= form_for @mark do |f| %>
+	
+	<%= render 'shared/error_messages', :object => f.object %>
+	
+	
 	  <div class="field">
 		<%= f.label :page %><br />
 		<%= f.text_field :page %>
@@ -11,7 +15,7 @@
 
 	  <div class="field">
 	    <%= f.label :note %><br />
-	    <%= f.text_field :note %>
+	    <%= f.text_area :note, :cols => "1", :rows => "1" %>
 	  </div>
 
 	  <div class="actions">

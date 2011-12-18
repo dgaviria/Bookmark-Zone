@@ -14,8 +14,16 @@
 
 <% if userIsBookOwner?(current_user) %>
 
-	<br>
+	</section>
+	<section class="round">
 	<%= render 'marks/addmark' %>
 	<p><%= link_to "Back to my Profile", root_path %></p>
 
 <% end %>
+
+</section>
+<section class="round">
+
+<h1>Goodreads Reviews</h1>
+
+<% #result=JSON.parse(open("http://www.goodreads.com/book/title?format=json&author=Paul+Davies&title=Mind+of+God?key=LNsDBhLQTvWd1JSdLIUXQ").read) %>

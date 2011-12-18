@@ -1,4 +1,7 @@
 class Book < ActiveRecord::Base
+  require 'open-uri'
+  require 'json'
+  
   belongs_to :user
   has_many :marks
   attr_accessible :title, :author

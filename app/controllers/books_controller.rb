@@ -21,6 +21,23 @@ class BooksController < ApplicationController
       render 'new'
     end
   end
+  
+  def edit
+    @book = Book.find(params[:id])
+    @title = "Edit book"
+  end
+  
+  def update
+    @book = Book.find(params[:id])
+    if @book.update_attributes(params[:book])
+      flash[:success] = "Book updated."
+      redirect_to @book
+    else
+      @title = "Edit book"
+      render 'edit'
+    end
+  end
+  
   def show
     @book = Book.find(params[:id])
     @title = @book.title

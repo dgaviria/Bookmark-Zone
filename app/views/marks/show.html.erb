@@ -2,4 +2,8 @@
 
 <p><%= @mark.note %></p>
 
-<p><%= link_to "Back to book", current_book %></p>
+<p>
+	<%= link_to "Edit mark", edit_mark_path(@mark) %> 
+	|
+	<%= link_to "Back to book", current_book %>
+</p>

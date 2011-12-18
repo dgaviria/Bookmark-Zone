@@ -13,8 +13,12 @@
 		<% end %>
 	</p>
 
-
 	<%= render 'books/addbook' %>
+	
+	<p>
+		<%= link_to "Edit user", edit_user_path(@user) %>
+	</p>
+	
 <% else %>
 	<p>Welcome to Bookmarkzone. Here you can bookmark things. Pretty sweet, huh?</p>
 

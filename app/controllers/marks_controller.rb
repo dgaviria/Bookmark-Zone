@@ -14,6 +14,7 @@ class MarksController < ApplicationController
       flash.now[:error] = "Mark could not be created."
       @title = "Add mark"
       redirect_to current_book
+      #this is a BUG it should render current_book showing the mark errs
     end
   end
   

@@ -11,5 +11,6 @@
 		<br><i><%= link_to m.page, m %></i><br>
 	<% end %>
 </p>
-
+<% if @user == current_user %>
 <%= render 'marks/addmark' %>
+<% end %>

@@ -19,7 +19,7 @@ class MarksController < ApplicationController
   
   def show
     @mark = Mark.find(params[:id])
-    @title = @mark.page
+    @title = "Page #{@mark.page}"
   end
   
   def destroy

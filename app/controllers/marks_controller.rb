@@ -18,6 +18,22 @@ class MarksController < ApplicationController
     end
   end
   
+  def edit
+    @mark = Mark.find(params[:id])
+    @title = "Edit mark"
+  end
+  
+  def update
+    @mark = Mark.find(params[:id])
+    if @mark.update_attributes(params[:mark])
+      flash[:success] = "Mark updated."
+      redirect_to @mark
+    else
+      @title = "Edit mark"
+      render 'edit'
+    end
+  end
+  
   def show
     @mark = Mark.find(params[:id])
     @title = "Page #{@mark.page}"

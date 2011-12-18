@@ -17,10 +17,13 @@
 
 	<br>
 	<%= render 'marks/addmark' %>
-	<p>
-		<%= link_to "Edit book", edit_book_path(@book) %> 
-		| 
-		<%= link_to "Back to my Profile", root_path %>
-	</p>
 
 <% end %>
+
+<p>
+	<% if can_access?(@book) %>
+	<%= link_to "Edit book", edit_book_path(@book) %> 
+	| 
+	<% end %>
+	<%= link_to "Back to my Profile", root_path %>
+</p>

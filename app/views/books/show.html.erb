@@ -29,6 +29,4 @@
 </section>
 <section class="round">
 
-<h1>Goodreads Reviews</h1>
-
-<% #result=JSON.parse(open("http://www.goodreads.com/book/title?format=json&author=Paul+Davies&title=Mind+of+God?key=LNsDBhLQTvWd1JSdLIUXQ").read) %>
+<%= render 'books/bookReviews' %>

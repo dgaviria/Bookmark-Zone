@@ -13,14 +13,6 @@
 	<% end %>
 </p>
 
-<% if userIsBookOwner?(current_user) %>
-
-	</section>
-	<section class="round">
-	<%= render 'marks/addmark' %>
-
-<% end %>
-
 <p>
 	<% if can_access?(@book) %>
 	<%= link_to "Edit book", edit_book_path(@book) %> 
@@ -28,6 +20,14 @@
 	<% end %>
 	<%= link_to "Back to my Profile", root_path %>
 </p>
+
+<% if userIsBookOwner?(current_user) %>
+
+	</section>
+	<section class="round">
+	<%= render 'marks/addmark' %>
+
+<% end %>
 
 </section>
 <section class="round">

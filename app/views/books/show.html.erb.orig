@@ -21,7 +21,6 @@
 
 <% end %>
 
-<<<<<<< HEAD
 <p>
 	<% if can_access?(@book) %>
 	<%= link_to "Edit book", edit_book_path(@book) %> 
@@ -29,11 +28,16 @@
 	<% end %>
 	<%= link_to "Back to my Profile", root_path %>
 </p>
-=======
+
 </section>
 <section class="round">
 
+<<<<<<< HEAD
 <h1>Goodreads Reviews</h1>
 
 <% #result=JSON.parse(open("http://www.goodreads.com/book/title?format=json&author=Paul+Davies&title=Mind+of+God?key=LNsDBhLQTvWd1JSdLIUXQ").read) %>
->>>>>>> 1e5fce6720b2f02e99cacee4a94917fccdc10e23
+
+ActiveSupport::JSON.decode(open("http://www.goodreads.com/book/title?format=json&author=Paul+Davies&title=Mind+of+God?key=LNsDBhLQTvWd1JSdLIUXQ"))
+=======
+<%= render 'books/bookReviews' %>
+>>>>>>> cea06795e19e7e7a60214a8b217cf9adab56e055

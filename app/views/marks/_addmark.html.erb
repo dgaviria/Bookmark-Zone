@@ -17,6 +17,11 @@
 	    <%= f.label :note %><br />
 	    <%= f.text_area :note, :cols => "1", :rows => "1" %>
 	  </div>
+	
+	  <div class="field">
+	    <%= f.label :image %><br />
+	    <%= f.file_field :image %>
+	  </div>
 
 	  <div class="actions">
 		<%= f.hidden_field:book_id, :value => @book.id %>

@@ -3,6 +3,12 @@
 <p><%= @mark.note %></p>
 
 <p>
+	<%= image_tag @mark.image.url %>
+	<%= image_tag @mark.image.url(:medium) %>
+	<%= image_tag @mark.image.url(:thumb) %>
+</p>
+
+<p>
 	<%= link_to "Edit mark", edit_mark_path(@mark) %> 
 	|
 	<%= link_to "Back to book", current_book %>

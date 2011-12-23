@@ -7,6 +7,7 @@ gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'activerecord-postgresql-adapter'
 gem 'sqlite3'
 
 gem 'json'

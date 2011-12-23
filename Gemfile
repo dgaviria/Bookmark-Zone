@@ -3,11 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
-gem 'activerecord-postgresql-adapter'
+#gem 'activerecord-postgresql-adapter'
 gem 'sqlite3'
 
 gem 'json'

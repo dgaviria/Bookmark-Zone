@@ -6,6 +6,7 @@ gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+gem 'pg'
 gem 'sqlite3'
 
 gem 'json'

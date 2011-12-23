@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 
-gem 'pg'
+gem 'pg', '0.11.0'
 #gem 'activerecord-postgresql-adapter'
 gem 'sqlite3'
 
